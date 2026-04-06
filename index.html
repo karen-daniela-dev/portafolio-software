@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Desarrolladora Backend</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <header>
+        <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 position-fixed vh-100">
+            <ul class="nav nav-pills flex-column mb-auto text-center">
+                <li class="nav-item mb-3">
+                    <a href="#inicio" class="nav-link">🏠</a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a href="#sobre-mi" class="nav-link">👩‍💻</a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a href="#habilidades" class="nav-link">⚙️</a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a href="#proyectos" class="nav-link">📁</a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a href="#experiencia" class="nav-link">💼</a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a href="#contacto" class="nav-link">📩</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-content">
+        <!-- ================= MAIN ================= -->
+        <main class="container-fluid">
+
+            <!-- ================= HERO ================= -->
+            <section id="inicio" class="min-vh-100 d-flex align-items-center">
+                <div class="container text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+
+                            <!-- Imagen -->
+                            <div class="mb-4">
+                                <img src="https://via.placeholder.com/150" alt="Foto perfil" class="img-fluid">
+                            </div>
+
+                            <!-- Nombre -->
+                            <h1>KAREN DANIELA DIAZ</h1>
+
+                            <!-- Título -->
+                            <h3>Desarrolladora Backend</h3>
+
+                            <!-- Descripción -->
+                            <p>
+                                Especializada en Python, FastAPI y Java. Apasionada por construir APIs robustas,
+                                escalables y bien estructuradas.
+                            </p>
+
+                            <!-- Botones -->
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="btn">Ver proyectos</a>
+                                <a href="#" class="btn">Descargar CV</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SOBRE MI ================= -->
+            <section id="sobre-mi" class="py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <!-- Texto -->
+                        <div class="col-md-6">
+                            <h2>Sobre mí</h2>
+                            <p>
+                                Soy desarrolladora de software enfocada en backend. Me especializo en la creación
+                                de APIs, automatización de procesos y manejo de bases de datos.
+                            </p>
+                        </div>
+
+                        <!-- Espacio imagen -->
+                        <div class="col-md-6 text-center">
+                            <img src="https://via.placeholder.com/300" alt="Sobre mí" class="img-fluid">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= HABILIDADES ================= -->
+            <section id="habilidades" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Habilidades</h2>
+
+                    <div class="row g-4">
+
+                        <!-- Backend -->
+                        <div class="col-md-3">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>FastAPI</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+
+                        <!-- Bases de datos -->
+                        <div class="col-md-3">
+                            <h4>Bases de datos</h4>
+                            <ul>
+                                <li>MongoDB</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="col-md-3">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+
+                        <!-- Herramientas -->
+                        <div class="col-md-3">
+                            <h4>Herramientas</h4>
+                            <ul>
+                                <li>Git</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PROYECTOS ================= -->
+            <section id="proyectos" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Proyectos</h2>
+
+                    <div class="row g-4">
+
+                        <!-- TARJETA REUTILIZABLE -->
+                        <div class="col-md-4">
+                            <div class="card h-100">
+
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto">
+
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Nombre del proyecto</h5>
+
+                                    <p class="card-text">
+                                        Descripción breve del proyecto.
+                                    </p>
+
+                                    <ul>
+                                        <li>FastAPI</li>
+                                        <li>MongoDB</li>
+                                    </ul>
+
+                                    <p>Estado: En desarrollo</p>
+
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn">Demo</a>
+                                        <a href="#" class="btn">GitHub</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- DUPLICAR TARJETAS -->
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300" class="card-img-top">
+                                <div class="card-body">
+                                    <h5>Proyecto</h5>
+                                    <p>Descripción</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= EXPERIENCIA ================= -->
+            <section id="experiencia" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Experiencia</h2>
+
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+
+                            <div class="mb-4">
+                                <h5>Empresa</h5>
+                                <p>Rol</p>
+                                <small>Fecha</small>
+                                <ul>
+                                    <li>Responsabilidad 1</li>
+                                    <li>Responsabilidad 2</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <h5>Empresa</h5>
+                                <p>Rol</p>
+                                <small>Fecha</small>
+                                <ul>
+                                    <li>Responsabilidad</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= EDUCACION ================= -->
+            <section id="educacion" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Educación</h2>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Carrera / Curso - Institución - Año
+                        </li>
+                        <li class="list-group-item">
+                            Curso - Plataforma - Año
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ================= CONTACTO ================= -->
+            <section id="contacto" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Contacto</h2>
+
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-6">
+
+                            <p>
+                                Si deseas trabajar conmigo o tienes alguna oportunidad, no dudes en contactarme:
+                            </p>
+
+                            <!-- Botones de contacto -->
+                            <div class="d-flex flex-column gap-3 mt-4">
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/573001234567" class="btn">
+                                    Contactar por WhatsApp
+                                </a>
+
+                                <!-- Email -->
+                                <a href="mailto:tuemail@email.com" class="btn">
+                                    Enviar correo electrónico
+                                </a>
+
+                            </div>
+
+                            <!-- Redes -->
+                            <div class="mt-4">
+                                <a href="#">LinkedIn</a> |
+                                <a href="#">GitHub</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="text-center py-4">
+            <p>© 2026 - derechos reservados</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
