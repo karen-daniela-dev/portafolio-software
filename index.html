@@ -200,22 +200,27 @@
       <!-- Filtros -->
       <div class="skills-filter" role="group" aria-label="Filtrar habilidades">
         <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
+                
         <button class="filter-btn" data-filter="data">Datos</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+
         <button class="filter-btn" data-filter="db">Bases de datos</button>
         <button class="filter-btn" data-filter="tools">Herramientas</button>
         <button class="filter-btn" data-filter="agile">Metodologías</button>
+        <button class="filter-btn" data-filter="network">Redes</button>
+
       </div>
 
       <!-- Grid de skills -->
       <div class="skills-grid reveal" id="skills-grid">
 
         <!-- BACKEND -->
-        <div class="skill-card" data-cat="backend">
+        <div class="skill-card" data-cat="backend data">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"
             class="skill-icon" />
           <div class="skill-name">Python</div>
-          <div class="skill-cat">Backend</div>
+          <div class="skill-cat">Backend | Data</div>
           <div class="skill-bar">
             <div class="skill-fill" data-w="90"></div>
           </div>
@@ -230,7 +235,7 @@
           </div>
         </div>
         <div class="skill-card" data-cat="backend">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="Python"
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="Python"
             class="skill-icon" />
           <div class="skill-name">FastAPI</div>
           <div class="skill-cat">Backend</div>
@@ -282,6 +287,17 @@
           </div>
         </div>
 
+        <!-- FRONTEND -->
+        <div class="skill-card" data-cat="frontend">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            alt="Js-logo" class="skill-icon js-icon" />
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-cat">frontend</div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-w="70"></div>
+          </div>
+        </div>
+
         <!-- DB -->
         <div class="skill-card" data-cat="db">
           <span class="skill-emoji">🐘</span>
@@ -325,6 +341,15 @@
           <div class="skill-cat">Frontend</div>
           <div class="skill-bar">
             <div class="skill-fill" data-w="68"></div>
+          </div>
+        </div>
+        <!-- Resdes -->
+        <div class="skill-card" data-cat="network">
+          <span class="skill-emoji">🌐</span>
+          <div class="skill-name">Networking</div>
+          <div class="skill-cat">Redes</div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-w="85"></div>
           </div>
         </div>
 
@@ -432,7 +457,7 @@
             </p>
             <h3 class="tl-role">Ingeniera Industrial</h3>
             <p class="tl-company">Fundación Universitaria de Popayán</p>
-            
+
             <div class="tag-list">
               <span class="tag tag-teal">Ingeniería Industrial</span>
             </div>

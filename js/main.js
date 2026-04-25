@@ -276,7 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const cat = this.dataset.filter;
 
       document.querySelectorAll('.skill-card').forEach(card => {
-        const match = cat === 'all' || card.dataset.cat === cat;
+        const cats = card.dataset.cat.split(' '); // convierte "backend data" en ["backend","data"]
+        const match = cat === 'all' || cats.includes(cat); //usa array
+        
         card.style.transition = 'opacity 0.3s, transform 0.3s';
         card.style.opacity    = match ? '1' : '0.2';
         card.style.transform  = match ? '' : 'scale(0.92)';
