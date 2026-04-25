@@ -63,17 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('hero-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
+    const hero = document.getElementById('hero');
     let W, H, particles = [];
 
     const resize = () => {
-      W = canvas.width  = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
+      // Usa las dimensiones reales del hero, no del canvas
+      W = canvas.width  = hero.offsetWidth;
+      H = canvas.height = hero.offsetHeight;
     };
     resize();
-    window.addEventListener('resize', resize, { passive: true });
+    // Re-calcular cuando cambia el tamaño de ventana
+    window.addEventListener('resize', () => {
+      resize();
+      // Redistribuir partículas al nuevo tamaño
+      particles.forEach(p => p.reset());
+    }, { passive: true });
 
-    const PARTICLE_COUNT = 70;
-    const MAX_DIST = 130;
+    const PARTICLE_COUNT = 100;
+    const MAX_DIST = 160;
 
     class Particle {
       constructor() { this.reset(); }
@@ -103,12 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
 
-    // Mouse repulsion
+    // Mouse repulsion — coordenadas relativas al hero
     let mouse = { x: -999, y: -999 };
-    canvas.parentElement.addEventListener('mousemove', e => {
-      const rect = canvas.getBoundingClientRect();
+    hero.addEventListener('mousemove', e => {
+      const rect = hero.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
+    });
+    hero.addEventListener('mouseleave', () => {
+      mouse.x = -999; mouse.y = -999;
     });
 
     const drawLines = () => {
