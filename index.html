@@ -1,300 +1,784 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Desarrolladora Backend</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karen Daniela Díaz Trochez — Desarrolladora Backend. Python, FastAPI, ETL, Power BI, Java, Spring Boot." />
+  <meta name="author" content="Karen Daniela Díaz Trochez" />
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- OG -->
+  <meta property="og:title"       content="Karen Daniela Díaz — Portfolio" />
+  <meta property="og:description" content="Desarrolladora Backend | Python · APIs · ETL · Power BI" />
+  <meta property="og:type"        content="website" />
+
+  <title>Karen Daniela Díaz | Backend Developer</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <!-- Variables y estilos propios -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
+<body>
 
-<body class="layout">
+  <!-- ══ FONDO GLOBAL ══ -->
+  <div class="bg-noise" aria-hidden="true"></div>
 
-    <!-- ================= SIDEBAR ================= -->
-    <header>
-        <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 position-fixed vh-100">
-            <ul class="nav nav-pills flex-column mb-auto text-center">
-                <li class="nav-item mb-3">
-                    <a href="#inicio" class="nav-link">🏠</a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a href="#sobre-mi" class="nav-link">👩‍💻</a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a href="#habilidades" class="nav-link">⚙️</a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a href="#proyectos" class="nav-link">📁</a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a href="#experiencia" class="nav-link">💼</a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a href="#contacto" class="nav-link">📩</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="page-content">
-        <!-- ================= MAIN ================= -->
-        <main class="container-fluid">
+  <!-- ══ CURSOR CUSTOM ══ -->
+  <div class="cursor-dot"  aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
-            <!-- ================= HERO ================= -->
-            <section id="inicio" class="min-vh-100 d-flex align-items-center">
-                <div class="container text-center">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
 
-                            <!-- Imagen -->
-                            <div class="mb-4">
-                                <img src="https://via.placeholder.com/150" alt="Foto perfil" class="img-fluid">
-                            </div>
+      <a href="#hero" class="nav-logo">KDT<span>_</span></a>
 
-                            <!-- Nombre -->
-                            <h1>KAREN DANIELA DIAZ</h1>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificaciones">Certs</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
 
-                            <!-- Título -->
-                            <h3>Desarrolladora Backend</h3>
+      <div class="nav-actions">
+        <button
+          id="theme-toggle"
+          class="btn-theme"
+          aria-label="Cambiar tema"
+          title="Cambiar tema"
+        >
+          <span id="theme-icon">🌙</span>
+        </button>
 
-                            <!-- Descripción -->
-                            <p>
-                                Especializada en Python, FastAPI y Java. Apasionada por construir APIs robustas,
-                                escalables y bien estructuradas.
-                            </p>
+        <a
+          href="assets/Karen_Diaz_CV.pdf"
+          download
+          class="btn-cv"
+          aria-label="Descargar CV"
+        >
+          <i class="bi bi-download me-1"></i> CV
+        </a>
 
-                            <!-- Botones -->
-                            <div class="d-flex justify-content-center gap-3">
-                                <a href="#" class="btn">Ver proyectos</a>
-                                <a href="#" class="btn">Descargar CV</a>
-                            </div>
+        <button
+          class="nav-hamburger"
+          id="hamburger"
+          aria-label="Menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= SOBRE MI ================= -->
-            <section id="sobre-mi" class="py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-
-                        <!-- Texto -->
-                        <div class="col-md-6">
-                            <h2>Sobre mí</h2>
-                            <p>
-                                Soy desarrolladora de software enfocada en backend. Me especializo en la creación
-                                de APIs, automatización de procesos y manejo de bases de datos.
-                            </p>
-                        </div>
-
-                        <!-- Espacio imagen -->
-                        <div class="col-md-6 text-center">
-                            <img src="https://via.placeholder.com/300" alt="Sobre mí" class="img-fluid">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= HABILIDADES ================= -->
-            <section id="habilidades" class="py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5">Habilidades</h2>
-
-                    <div class="row g-4">
-
-                        <!-- Backend -->
-                        <div class="col-md-3">
-                            <h4>Backend</h4>
-                            <ul>
-                                <li>Python</li>
-                                <li>FastAPI</li>
-                                <li>Java</li>
-                            </ul>
-                        </div>
-
-                        <!-- Bases de datos -->
-                        <div class="col-md-3">
-                            <h4>Bases de datos</h4>
-                            <ul>
-                                <li>MongoDB</li>
-                                <li>MySQL</li>
-                            </ul>
-                        </div>
-
-                        <!-- Frontend -->
-                        <div class="col-md-3">
-                            <h4>Frontend</h4>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-
-                        <!-- Herramientas -->
-                        <div class="col-md-3">
-                            <h4>Herramientas</h4>
-                            <ul>
-                                <li>Git</li>
-                                <li>Docker</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= PROYECTOS ================= -->
-            <section id="proyectos" class="py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5">Proyectos</h2>
-
-                    <div class="row g-4">
-
-                        <!-- TARJETA REUTILIZABLE -->
-                        <div class="col-md-4">
-                            <div class="card h-100">
-
-                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto">
-
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Nombre del proyecto</h5>
-
-                                    <p class="card-text">
-                                        Descripción breve del proyecto.
-                                    </p>
-
-                                    <ul>
-                                        <li>FastAPI</li>
-                                        <li>MongoDB</li>
-                                    </ul>
-
-                                    <p>Estado: En desarrollo</p>
-
-                                    <div class="mt-auto d-flex gap-2">
-                                        <a href="#" class="btn">Demo</a>
-                                        <a href="#" class="btn">GitHub</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- DUPLICAR TARJETAS -->
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img src="https://via.placeholder.com/300" class="card-img-top">
-                                <div class="card-body">
-                                    <h5>Proyecto</h5>
-                                    <p>Descripción</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= EXPERIENCIA ================= -->
-            <section id="experiencia" class="py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5">Experiencia</h2>
-
-                    <div class="row">
-                        <div class="col-md-8 mx-auto">
-
-                            <div class="mb-4">
-                                <h5>Empresa</h5>
-                                <p>Rol</p>
-                                <small>Fecha</small>
-                                <ul>
-                                    <li>Responsabilidad 1</li>
-                                    <li>Responsabilidad 2</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-4">
-                                <h5>Empresa</h5>
-                                <p>Rol</p>
-                                <small>Fecha</small>
-                                <ul>
-                                    <li>Responsabilidad</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ================= EDUCACION ================= -->
-            <section id="educacion" class="py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5">Educación</h2>
-
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            Carrera / Curso - Institución - Año
-                        </li>
-                        <li class="list-group-item">
-                            Curso - Plataforma - Año
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- ================= CONTACTO ================= -->
-            <section id="contacto" class="py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5">Contacto</h2>
-
-                    <div class="row justify-content-center text-center">
-                        <div class="col-md-6">
-
-                            <p>
-                                Si deseas trabajar conmigo o tienes alguna oportunidad, no dudes en contactarme:
-                            </p>
-
-                            <!-- Botones de contacto -->
-                            <div class="d-flex flex-column gap-3 mt-4">
-
-                                <!-- WhatsApp -->
-                                <a href="https://wa.me/573001234567" class="btn">
-                                    Contactar por WhatsApp
-                                </a>
-
-                                <!-- Email -->
-                                <a href="mailto:tuemail@email.com" class="btn">
-                                    Enviar correo electrónico
-                                </a>
-
-                            </div>
-
-                            <!-- Redes -->
-                            <div class="mt-4">
-                                <a href="#">LinkedIn</a> |
-                                <a href="#">GitHub</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- ================= FOOTER ================= -->
-        <footer class="text-center py-4">
-            <p>© 2026 - derechos reservados</p>
-        </footer>
     </div>
+  </nav>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Presentación">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Orbes decorativos -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <i class="bi bi-geo-alt"></i> Popayán, Colombia
+        </div>
+
+        <h1 class="hero-name">
+          Karen Daniela<br>
+          <span class="gradient-text">Díaz Trochez</span>
+        </h1>
+
+        <p class="hero-role">
+          <span id="typed-text"></span><span class="cursor-blink">|</span>
+        </p>
+
+        <p class="hero-desc">
+          Desarrolladora de software especializada en <strong>APIs REST con Python</strong>,
+          pipelines <strong>ETL</strong>, automatización y visualización de datos con
+          <strong>Power BI</strong>. Actualmente en formación Full Stack.
+        </p>
+
+        <div class="hero-ctas">
+          <a
+            href="mailto:tu-email@ejemplo.com?subject=Hola Karen, vi tu portafolio"
+            class="btn-primary"
+          >
+            <i class="bi bi-envelope-fill"></i> Escribirme
+          </a>
+          <a
+            href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-whatsapp"
+          >
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span
+              class="hero-stat-num"
+              data-count="95"
+              data-suffix="%"
+              aria-label="95 por ciento"
+            >0</span>
+            <span class="hero-stat-label">reducción de<br>tareas manuales</span>
+          </div>
+          <div class="hero-stat">
+            <span
+              class="hero-stat-num"
+              data-count="6"
+              data-suffix="+"
+              aria-label="Más de 6"
+            >0</span>
+            <span class="hero-stat-label">certificaciones<br>obtenidas</span>
+          </div>
+          <div class="hero-stat">
+            <span
+              class="hero-stat-num"
+              data-count="3"
+              aria-label="3"
+            >0</span>
+            <span class="hero-stat-label">stacks<br>dominados</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE MÍ
+  ════════════════════════════════════════════ -->
+  <section id="sobre" class="section" aria-label="Sobre mí">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">01 — Sobre mí</p>
+      <h2 class="sec-title">Tecnóloga en<br><span class="accent">Desarrollo de Software</span></h2>
+
+      <div class="about-grid reveal">
+
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-glow" aria-hidden="true"></div>
+          <div class="about-avatar" aria-label="Foto de perfil">
+            <!-- Reemplaza con <img src="assets/img/foto.jpg" alt="Karen Daniela Díaz"> -->
+            KD
+          </div>
+        </div>
+
+        <div>
+          <p class="about-bio">
+            Desarrolladora de software con experiencia en el diseño y desarrollo de
+            <strong>APIs REST en Python</strong>, implementación de soluciones de
+            <strong>automatización y web scraping</strong> para la gestión,
+            procesamiento y análisis de datos con Power BI.
+          </p>
+          <p class="about-bio">
+            Experiencia en <strong>metodologías ágiles (Scrum)</strong>, control de versiones con Git
+            y administración de bases de datos <strong>relacionales (SQL)</strong>
+            y <strong>no relacionales (MongoDB)</strong>. Actualmente en formación
+            full stack para integración completa de aplicaciones web.
+          </p>
+          <p class="about-bio">
+            Cuento con conocimientos en desarrollo backend con <strong>Java y Spring Boot</strong>
+            y actualmente curso el Bootcamp Generation Colombia para ampliar mi stack al
+            desarrollo completo de aplicaciones.
+          </p>
+
+          <div class="about-pills">
+            <span class="pill"><i class="bi bi-geo-alt-fill"></i> Popayán, Colombia</span>
+            <span class="pill">🐍 Python</span>
+            <span class="pill">☕ Java</span>
+            <span class="pill">📊 Power BI</span>
+            <span class="pill">🔄 ETL Pipelines</span>
+            <span class="pill">🌐 Full Stack (en formación)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       HABILIDADES
+  ════════════════════════════════════════════ -->
+  <section id="skills" class="section" aria-label="Habilidades">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">02 — Habilidades</p>
+      <h2 class="sec-title">Stack <span class="accent">tecnológico</span></h2>
+
+      <!-- Filtros -->
+      <div class="skills-filter" role="group" aria-label="Filtrar habilidades">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="data">Datos</button>
+        <button class="filter-btn" data-filter="db">Bases de datos</button>
+        <button class="filter-btn" data-filter="tools">Herramientas</button>
+        <button class="filter-btn" data-filter="agile">Metodologías</button>
+      </div>
+
+      <!-- Grid de skills -->
+      <div class="skills-grid reveal" id="skills-grid">
+
+        <!-- BACKEND -->
+        <div class="skill-card" data-cat="backend">
+          <span class="skill-emoji">🐍</span>
+          <div class="skill-name">Python</div>
+          <div class="skill-cat">Backend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-card" data-cat="backend">
+          <span class="skill-emoji">☕</span>
+          <div class="skill-name">Java</div>
+          <div class="skill-cat">Backend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="74"></div></div>
+        </div>
+        <div class="skill-card" data-cat="backend">
+          <span class="skill-emoji">⚡</span>
+          <div class="skill-name">FastAPI</div>
+          <div class="skill-cat">Backend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="86"></div></div>
+        </div>
+        <div class="skill-card" data-cat="backend">
+          <span class="skill-emoji">🌿</span>
+          <div class="skill-name">Spring Boot</div>
+          <div class="skill-cat">Backend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+        </div>
+        <div class="skill-card" data-cat="backend">
+          <span class="skill-emoji">🔗</span>
+          <div class="skill-name">REST APIs</div>
+          <div class="skill-cat">Backend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+
+        <!-- DATOS -->
+        <div class="skill-card" data-cat="data">
+          <span class="skill-emoji">📊</span>
+          <div class="skill-name">Power BI</div>
+          <div class="skill-cat">Datos</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-card" data-cat="data">
+          <span class="skill-emoji">🔄</span>
+          <div class="skill-name">ETL Pipelines</div>
+          <div class="skill-cat">Datos</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-card" data-cat="data">
+          <span class="skill-emoji">🕷️</span>
+          <div class="skill-name">Web Scraping</div>
+          <div class="skill-cat">Datos</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+
+        <!-- DB -->
+        <div class="skill-card" data-cat="db">
+          <span class="skill-emoji">🐘</span>
+          <div class="skill-name">SQL / MySQL</div>
+          <div class="skill-cat">Base de datos</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+        </div>
+        <div class="skill-card" data-cat="db">
+          <span class="skill-emoji">🍃</span>
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-cat">Base de datos</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="skill-card" data-cat="tools">
+          <span class="skill-emoji">🔧</span>
+          <div class="skill-name">Git / GitHub</div>
+          <div class="skill-cat">Control de versiones</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-card" data-cat="tools">
+          <span class="skill-emoji">☁️</span>
+          <div class="skill-name">Google Cloud</div>
+          <div class="skill-cat">Cloud</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="60"></div></div>
+        </div>
+        <div class="skill-card" data-cat="tools">
+          <span class="skill-emoji">🅱️</span>
+          <div class="skill-name">Bootstrap</div>
+          <div class="skill-cat">Frontend</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="68"></div></div>
+        </div>
+
+        <!-- AGILE -->
+        <div class="skill-card" data-cat="agile">
+          <span class="skill-emoji">🔁</span>
+          <div class="skill-name">Scrum</div>
+          <div class="skill-cat">Metodologías Ágiles</div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCIA
+  ════════════════════════════════════════════ -->
+  <section id="experiencia" class="section" aria-label="Experiencia">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">03 — Trayectoria</p>
+      <h2 class="sec-title">Experiencia &<br><span class="accent">Educación</span></h2>
+
+      <div class="timeline reveal">
+
+        <!-- ── Cisco ── -->
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <p class="tl-date">
+              <i class="bi bi-briefcase-fill me-1"></i>
+              MARZO 2025 — OCTUBRE 2025
+            </p>
+            <h3 class="tl-company">Cisco Systems</h3>
+            <p class="tl-role">Intern · Desarrollo de Software · Bogotá, Colombia</p>
+            <ul class="tl-bullets">
+              <li>Desarrollé APIs REST con <strong>Python y FastAPI</strong> para automatizar procesos internos, mejorando el acceso y procesamiento de datos.</li>
+              <li>Implementé <strong>pipelines ETL</strong> para integración de datos desde múltiples fuentes, aumentando la disponibilidad de información para análisis.</li>
+              <li>Automaticé extracción de datos en aplicaciones web dinámicas, reduciendo tareas manuales en un <strong>95%</strong>.</li>
+              <li>Diseñé modelos de datos en <strong>MongoDB Atlas</strong> y desarrollé dashboards en <strong>Power BI</strong>, optimizando visualización de indicadores operativos.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag tag-purple">Python</span>
+              <span class="tag tag-purple">FastAPI</span>
+              <span class="tag tag-purple">ETL</span>
+              <span class="tag tag-purple">MongoDB Atlas</span>
+              <span class="tag tag-purple">Power BI</span>
+              <span class="tag tag-purple">Web Scraping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Generation Colombia ── -->
+        <div class="tl-item edu">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <p class="tl-date">
+              <i class="bi bi-mortarboard-fill me-1"></i>
+              FEBRERO 2026 — JUNIO 2026
+            </p>
+            <h3 class="tl-company">Bootcamp Generation Colombia</h3>
+            <p class="tl-role">Desarrolladora Junior Full Stack · Java</p>
+            <div class="tag-list">
+              <span class="tag tag-teal">Java</span>
+              <span class="tag tag-teal">Spring Boot</span>
+              <span class="tag tag-teal">Full Stack</span>
+              <span class="tag tag-teal">En curso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SENA ── -->
+        <div class="tl-item edu">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <p class="tl-date">
+              <i class="bi bi-mortarboard-fill me-1"></i>
+              JUNIO 2023 — OCTUBRE 2025
+            </p>
+            <h3 class="tl-company">SENA</h3>
+            <p class="tl-role">Tecnóloga en Análisis y Desarrollo de Software · Popayán</p>
+            <div class="tag-list">
+              <span class="tag tag-teal">Tecnóloga</span>
+              <span class="tag tag-teal">Software</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Universidad ── -->
+        <div class="tl-item edu">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <p class="tl-date">
+              <i class="bi bi-mortarboard-fill me-1"></i>
+              AGOSTO 2011 — SEPTIEMBRE 2017
+            </p>
+            <h3 class="tl-company">Fundación Universitaria de Popayán</h3>
+            <p class="tl-role">Ingeniera Industrial</p>
+            <div class="tag-list">
+              <span class="tag tag-teal">Ingeniería Industrial</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROYECTOS
+  ════════════════════════════════════════════ -->
+  <section id="proyectos" class="section" aria-label="Proyectos">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">04 — Proyectos</p>
+      <h2 class="sec-title">Lo que he<br><span class="accent">construido</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Proyecto 1: E-commerce -->
+        <div class="proj-flip-wrapper reveal" role="article" aria-label="Proyecto E-commerce">
+          <div class="proj-flip-inner">
+
+            <!-- Frente -->
+            <div class="proj-front">
+              <div class="proj-front-header">
+                <div class="proj-icon proj-icon-purple">🛒</div>
+                <span class="proj-status active">COMPLETADO</span>
+              </div>
+              <h3 class="proj-name">Sistema E-commerce</h3>
+              <p class="proj-desc-front">
+                API REST completa con operaciones CRUD para gestión de productos,
+                usuarios y órdenes. Arquitectura limpia con Spring Boot y MySQL.
+              </p>
+              <p class="proj-tech-hint">// Hover para ver detalles →</p>
+            </div>
+
+            <!-- Dorso -->
+            <div class="proj-back">
+              <div>
+                <h3 class="proj-back-title">Sistema E-commerce</h3>
+                <p class="proj-back-desc">
+                  Desarrollo de una API REST completa con arquitectura por capas
+                  (controller → service → repository). Incluye autenticación,
+                  gestión de inventario y sistema de órdenes con CRUD completo.
+                </p>
+                <div class="proj-back-tags">
+                  <span class="tag tag-purple">Java</span>
+                  <span class="tag tag-purple">Spring Boot</span>
+                  <span class="tag tag-purple">MySQL</span>
+                  <span class="tag tag-teal">REST API</span>
+                  <span class="tag tag-teal">Bootstrap</span>
+                  <span class="tag tag-teal">Git</span>
+                </div>
+              </div>
+              <div class="proj-back-links">
+                <a
+                  href="https://github.com/daniela-trochez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline-sm"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Proyecto 2: En construcción -->
+        <div class="proj-flip-wrapper reveal reveal-delay-2" role="article" aria-label="Proyecto en construcción">
+          <div class="proj-flip-inner">
+
+            <div class="proj-front">
+              <div class="proj-front-header">
+                <div class="proj-icon proj-icon-teal">🔨</div>
+                <span class="proj-status wip">EN DESARROLLO</span>
+              </div>
+              <h3 class="proj-name">Proyecto Java #2</h3>
+              <p class="proj-desc-front">
+                Nuevo proyecto en construcción durante el Bootcamp Generation Colombia.
+                Stack Java con Spring Boot · próximamente en GitHub.
+              </p>
+              <p class="proj-tech-hint">// Coming soon →</p>
+            </div>
+
+            <div class="proj-back">
+              <div>
+                <h3 class="proj-back-title">Proyecto Java #2</h3>
+                <p class="proj-back-desc">
+                  Proyecto actualmente en desarrollo como parte del Bootcamp
+                  Generation Colombia. Detalles disponibles próximamente.
+                  ¡Mantente al tanto en GitHub!
+                </p>
+                <div class="proj-back-tags">
+                  <span class="tag tag-teal">Java</span>
+                  <span class="tag tag-teal">Spring Boot</span>
+                  <span class="tag tag-teal">En proceso</span>
+                </div>
+              </div>
+              <div class="proj-back-links">
+                <a
+                  href="https://github.com/daniela-trochez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline-sm"
+                >
+                  <i class="bi bi-github"></i> Seguir en GitHub
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CERTIFICACIONES
+  ════════════════════════════════════════════ -->
+  <section id="certificaciones" class="section" aria-label="Certificaciones">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">05 — Credenciales</p>
+      <h2 class="sec-title">Certificaciones<br><span class="accent">obtenidas</span></h2>
+
+      <div class="certs-grid reveal">
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-cisco" aria-label="Cisco">🔵</div>
+          <div>
+            <p class="cert-name">CCST Networking</p>
+            <p class="cert-meta">Cisco · 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-cisco" aria-label="Cisco">🔵</div>
+          <div>
+            <p class="cert-name">Python Essentials</p>
+            <p class="cert-meta">Cisco · 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-google" aria-label="Google">🟦</div>
+          <div>
+            <p class="cert-name">Google Cloud Fundamentals: Core Infrastructure</p>
+            <p class="cert-meta">Google · 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+          <div>
+            <p class="cert-name">ONE — Java y Spring Boot G5</p>
+            <p class="cert-meta">Alura Latam · 2023</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+          <div>
+            <p class="cert-name">ONE — Business Agility / Scrum</p>
+            <p class="cert-meta">Alura Latam · 2023</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+          <div>
+            <p class="cert-name">ONE — Software Orientado a Objetos</p>
+            <p class="cert-meta">Alura Latam · 2023</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO
+  ════════════════════════════════════════════ -->
+  <section id="contacto" class="section" aria-label="Contacto">
+    <div class="section-inner">
+
+      <p class="sec-eyebrow">06 — Contacto</p>
+      <h2 class="sec-title">Hablemos<br><span class="accent">sobre tu proyecto</span></h2>
+
+      <div class="contact-grid reveal">
+
+        <!-- Izquierda -->
+        <div>
+          <p class="contact-headline">
+            ¿Tienes una oportunidad?<br>Estoy disponible.
+          </p>
+          <p class="contact-sub">
+            Abierta a roles en desarrollo backend, proyectos de datos o posiciones
+            full stack. Respondo en menos de 24 horas 🚀
+          </p>
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:tu-email@ejemplo.com?subject=Hola Karen, vi tu portafolio"
+              class="contact-link-btn email"
+            >
+              <div class="clb-icon ico-email">✉️</div>
+              <div class="clb-info">
+                <div class="clb-name">Correo electrónico</div>
+                <div class="clb-val">tu-email@ejemplo.com</div>
+              </div>
+              <span class="clb-arrow">›</span>
+            </a>
+
+            <a
+              href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-btn wa"
+            >
+              <div class="clb-icon ico-wa">💬</div>
+              <div class="clb-info">
+                <div class="clb-name">WhatsApp</div>
+                <div class="clb-val">+57 311 722 6230</div>
+              </div>
+              <span class="clb-arrow">›</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/software-development-co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-btn linkedin"
+            >
+              <div class="clb-icon ico-linkedin">in</div>
+              <div class="clb-info">
+                <div class="clb-name">LinkedIn</div>
+                <div class="clb-val">software-development-co</div>
+              </div>
+              <span class="clb-arrow">›</span>
+            </a>
+
+            <a
+              href="https://github.com/daniela-trochez"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-btn github"
+            >
+              <div class="clb-icon ico-github"><i class="bi bi-github"></i></div>
+              <div class="clb-info">
+                <div class="clb-name">GitHub</div>
+                <div class="clb-val">daniela-trochez</div>
+              </div>
+              <span class="clb-arrow">›</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Derecha -->
+        <div class="contact-panel">
+          <div class="status-indicator">
+            <div class="status-dot" aria-hidden="true"></div>
+            DISPONIBLE PARA TRABAJAR
+          </div>
+
+          <a
+            href="assets/Karen_Diaz_CV.pdf"
+            download
+            class="btn-cv-big"
+          >
+            <i class="bi bi-download me-2"></i> Descargar CV completo
+          </a>
+
+          <p class="contact-sub-text">o conecta por redes sociales</p>
+
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/software-development-co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="soc-icon-btn"
+              aria-label="LinkedIn"
+            >in</a>
+            <a
+              href="https://github.com/daniela-trochez"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="soc-icon-btn"
+              aria-label="GitHub"
+            ><i class="bi bi-github"></i></a>
+            <a
+              href="mailto:tu-email@ejemplo.com"
+              class="soc-icon-btn"
+              aria-label="Email"
+            >✉️</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        © 2025 Karen Daniela Díaz Trochez
+      </p>
+      <p class="footer-built">
+        Built with Bootstrap 5 · CSS · Vanilla JS
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       FAB WHATSAPP (fijo en toda la página)
+  ════════════════════════════════════════════ -->
+  <a
+    href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fab-wa"
+    aria-label="Contactar por WhatsApp"
+    title="Contactar por WhatsApp"
+  >
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+
+  <!-- ── Scripts ── -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/main.js"></script>
 
 </body>
-
 </html>
