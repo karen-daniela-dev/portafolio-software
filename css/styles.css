@@ -532,6 +532,7 @@ body {
   transition-delay: 0.4s;
 }
 
+ 
 /* ============================================================
    SOBRE MÍ
    ============================================================ */
@@ -541,64 +542,149 @@ body {
   gap: 40px;
   align-items: start;
 }
-
+ 
+/* ── Wrapper externo ── */
 .about-avatar-wrap {
   position: relative;
-}
-.about-avatar {
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: var(--radius-card);
-  background: var(--bg-card);
-  border: 1px solid var(--glass-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 52px;
-  color: var(--clr-purple);
-  position: relative;
-  overflow: hidden;
+  max-width: 280px;
 }
-.about-avatar::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: var(--radius-card);
-  padding: 1px;
-  background: var(--grad-primary);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-/* Glow animado en el avatar */
+ 
+/* ── Glow difuso detrás de la foto ── */
 .about-avatar-glow {
   position: absolute;
-  inset: -30px;
+  inset: -40px;
+  border-radius: 50%;
   background: radial-gradient(
-    circle,
-    rgba(124, 111, 255, 0.15),
+    circle at 50% 50%,
+    rgba(124,111,255,0.28) 0%,
+    rgba(208,107,255,0.15) 40%,
     transparent 70%
   );
-  border-radius: 50%;
-  animation: pulse 3s ease-in-out infinite;
-  z-index: -1;
+  filter: blur(20px);
+  animation: avatarGlow 4s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
 }
+body.light-mode .about-avatar-glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(124,111,255,0.15) 0%,
+    rgba(208,107,255,0.08) 40%,
+    transparent 70%
+  );
+}
+@keyframes avatarGlow {
+  from { opacity: 0.7; transform: scale(0.95); }
+  to   { opacity: 1;   transform: scale(1.05); }
+}
+ 
+/* ── Marco principal con borde gradiente ── */
+.about-avatar {
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 15/16;
+  border-radius: 24px;
+  padding: 4px;
+  background: linear-gradient(135deg, #7c6fff, #d06bff, #00d4aa);
+  background-size: 300% 300%;
+  animation: borderFlow 5s ease infinite;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 20px 60px rgba(0,0,0,0.4),
+    0 0 30px rgba(124,111,255,0.35);
+  transition: box-shadow var(--transition-mid);
+}
+body.light-mode .about-avatar {
+  box-shadow:
+    0 0 0 1px rgba(124,111,255,0.2),
+    0 16px 48px rgba(124,111,255,0.18),
+    0 4px 16px rgba(0,0,0,0.08);
+}
+.about-avatar-wrap:hover .about-avatar {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.10),
+    0 24px 70px rgba(0,0,0,0.5),
+    0 0 50px rgba(124,111,255,0.55),
+    0 0 90px rgba(208,107,255,0.25);
+}
+body.light-mode .about-avatar-wrap:hover .about-avatar {
+  box-shadow:
+    0 0 0 1px rgba(124,111,255,0.35),
+    0 20px 56px rgba(124,111,255,0.28),
+    0 0 40px rgba(124,111,255,0.2);
+}
+@keyframes borderFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+ 
+/* ── Contenedor interior: recorta la foto ── */
+.about-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-surface);
+  position: relative;
+}
+ 
+/* ── La imagen ── */
+.about-avatar-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.55s ease;
+  filter: brightness(1) saturate(1.05);
+}
+.about-avatar-wrap:hover .about-avatar-inner img {
+  transform: scale(1.35);
+}
+body.light-mode .about-avatar-inner img {
+  filter: brightness(1.03) saturate(1.08);
+}
+ 
+/* ── Overlay glass (reflejo) ── */
+.about-avatar-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(7, 30, 63, 0.09) 0%,
+    transparent 50%,
+    rgba(0,0,0,0.10) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+body.light-mode .about-avatar-inner::after {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0) 0%,
+    transparent 55%,
+    rgba(44, 43, 58, 0.05) 100%
+  );
+}
+ 
 
+
+
+ 
 .about-bio {
-  
-  font-size: 1rem;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
 }
-.about-bio strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
+.about-bio strong { color: var(--text-primary); font-weight: 600; }
+ 
 .about-pills {
   display: flex;
   gap: 8px;
@@ -622,7 +708,6 @@ body {
   border-color: var(--clr-purple);
   color: var(--clr-purple);
 }
-
 /* ============================================================
    HABILIDADES
    ============================================================ */
