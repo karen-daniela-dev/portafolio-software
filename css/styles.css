@@ -481,7 +481,7 @@ body {
 .section-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0px 24px;
 }
 .section-divider {
   border: none;
@@ -980,11 +980,82 @@ body.light-mode .about-avatar-inner::after {
   color: var(--clr-teal);
 }
 
+
+
+/* ════════════════════════════════════════
+   ESTADO DE PROYECTOS (BANNER)
+════════════════════════════════════════ */
+
+.projects-status {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-status-inner {
+  max-width: 680px;
+  width: 100%;
+
+  padding: 40px 30px;
+  border-radius: var(--radius-card);
+
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glow-purple);
+
+  text-align: center;
+  transition: var(--transition-mid);
+}
+
+.projects-status-inner:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Texto */
+
+.status-eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.status-title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.status-title .blink {
+  animation: blink 1s infinite;
+  color: var(--clr-cyan);
+}
+
+.status-desc {
+  font-size: var(--fs-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Animación cursor */
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
 /* ============================================================
    PROYECTOS
    ============================================================ */
-.projects-grid {
-  display: grid;
+.projects-grid { 
+  display: none;
+
+  /* display: grid; */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
@@ -1136,10 +1207,21 @@ body.light-mode .about-avatar-inner::after {
 /* ============================================================
    CERTIFICACIONES
    ============================================================ */
-.certs-grid {
+
+#certificaciones {
+  margin-top: -100px;
+}
+
+   .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 12px;
+}
+
+.cert-link {
+  text-decoration: none;   /* quita subrayado */
+  color: inherit;          /* mantiene colores originales */
+  display: block;          /* hace que el link ocupe toda la tarjeta */
 }
 
 .cert-card {
@@ -1154,6 +1236,7 @@ body.light-mode .about-avatar-inner::after {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   transition: all var(--transition-fast);
+  
 }
 .cert-card:hover {
   border-color: var(--clr-teal);
