@@ -1178,7 +1178,22 @@ body.light-mode .about-avatar-inner::after {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.65;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+.proj-more {
+  color: var(--clr-teal);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: all var(--transition-fast);
+  opacity: 0.8;
+  font-size: 13px; 
+}
+
+.proj-more:hover {
+  text-decoration: underline;
+  color: var(--clr-cyan);
+  opacity: 1;
 }
 .proj-back-tags {
 
