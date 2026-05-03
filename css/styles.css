@@ -450,8 +450,7 @@ body {
   opacity: 0;
   animation: fadeUp 0.7s 1.2s forwards;
 }
-.hero-stat {
-}
+
 .hero-stat-num {
   font-family: var(--font-display);
   font-size: 32px;
@@ -989,7 +988,8 @@ body.light-mode .about-avatar-inner::after {
 .projects-status {
   position: relative;
   margin-bottom: 50px;
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: center;
 }
 
@@ -1050,12 +1050,12 @@ body.light-mode .about-avatar-inner::after {
 }
 
 /* ============================================================
-   PROYECTOS
+   PROYECTOS TARJETAS
    ============================================================ */
 .projects-grid { 
-  display: none;
+  /* display: none; */
 
-  /* display: grid; */
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
