@@ -1207,7 +1207,7 @@ body.light-mode .proj-status.wip {
   margin-bottom: 0.9rem;
 }
 .proj-more {
-  color: var(--clr-teal);
+  color: var(--clr-purple);
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
