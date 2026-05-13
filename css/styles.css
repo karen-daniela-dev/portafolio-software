@@ -814,7 +814,7 @@ body.light-mode .about-avatar-inner::after {
 
 .skill-card:hover .skill-icon {
   transform: scale(1.2);
-  filter: drop-shadow(0 0 12px #00f0ff);
+  
 }
 
 
