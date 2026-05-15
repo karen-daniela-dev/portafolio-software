@@ -1326,9 +1326,11 @@ body.light-mode .proj-status.wip {
 /* ============================================================
    CERTIFICACIONES
    ============================================================ */
-
+#proyectos {
+  padding-bottom: 0;
+}
 #certificaciones {
-  margin-top: -100px;
+  margin-top: 40px; /* espacio controlado */
 }
 
    .certs-grid {
@@ -1739,6 +1741,7 @@ footer {
   }
   .projects-grid {
     grid-template-columns: 1fr;
+    margin-bottom: 60px;
   }
   .proj-flip-wrapper {
     height: auto;
@@ -1758,6 +1761,16 @@ footer {
     position: static;
     backface-visibility: visible;
     -webkit-backface-visibility: visible;
+  }
+  .proj-flip-wrapper {
+    height: auto; /* ESTA ES LA CLAVE para que me fallara responsive */
+  }
+
+  .proj-flip-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* espacio entre front y back */
+     transform-style: flat;
   }
 }
 
