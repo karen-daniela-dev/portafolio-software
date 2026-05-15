@@ -129,7 +129,7 @@ body {
 
 .nav-logo {
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 23px;
   color: var(--clr-purple);
   letter-spacing: 2px;
   text-decoration: none;
@@ -689,6 +689,7 @@ body.light-mode .about-avatar-inner::after {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
+  margin-top: 50px;
 }
 .about-bio strong { color: var(--text-primary); font-weight: 600; }
  
@@ -1728,6 +1729,9 @@ footer {
 @media (max-width: 991px) {
   body.light-mode .nav-links.open {
     background: linear-gradient(135deg, #e8dcf3, #eaf5f8ef, #e8e6ec71);
+  }
+  .about-bio {
+    margin-top: 1px;
   }
 
   .about-grid {
