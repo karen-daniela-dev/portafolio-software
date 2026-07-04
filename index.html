@@ -1,670 +1,766 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Karen Daniela Díaz Trochez — Desarrolladora Backend. Python, FastAPI, ETL, Power BI, Java, Spring Boot."
+    />
+    <meta name="author" content="Karen Daniela Díaz Trochez" />
+    <link
+      rel="shortcut icon"
+      href="assets/proyectos/favi.png"
+      type="image/x-icon"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Karen Daniela Díaz Trochez — Desarrolladora Backend. Python, FastAPI, ETL, Power BI, Java, Spring Boot." />
-  <meta name="author" content="Karen Daniela Díaz Trochez" />
-  <link rel="shortcut icon" href="assets/proyectos/favi.png" type="image/x-icon">
+    <!-- OG -->
+    <meta property="og:title" content="Karen Daniela Díaz — Portfolio" />
+    <meta
+      property="og:description"
+      content="Desarrolladora Backend | Python · APIs · ETL · Power BI"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- OG -->
-  <meta property="og:title" content="Karen Daniela Díaz — Portfolio" />
-  <meta property="og:description" content="Desarrolladora Backend | Python · APIs · ETL · Power BI" />
-  <meta property="og:type" content="website" />
+    <title>Karen Daniela Díaz | Backend Developer</title>
 
-  <title>Karen Daniela Díaz | Backend Developer</title>
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <!-- Devicon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <!-- Bootstrap 5 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    crossorigin="anonymous" />
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Variables y estilos propios -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <!-- Variables y estilos propios -->
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body>
+    <!-- ══ FONDO GLOBAL ══ -->
+    <div class="bg-noise" aria-hidden="true"></div>
 
-<body>
+    <!-- ══ CURSOR CUSTOM ══ -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- ══ FONDO GLOBAL ══ -->
-  <div class="bg-noise" aria-hidden="true"></div>
-
-  <!-- ══ CURSOR CUSTOM ══ -->
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════════ -->
-  <nav id="navbar" role="navigation" aria-label="Navegación principal">
-    <div class="nav-inner">
+    <nav id="navbar" role="navigation" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">KDT<span>_</span></a>
 
-      <a href="#hero" class="nav-logo">KDT<span>_</span></a>
+        <ul class="nav-links" id="nav-menu" role="list">
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#certificaciones">Certs</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-      <ul class="nav-links" id="nav-menu" role="list">
-        <li><a href="#sobre">Sobre mí</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#certificaciones">Certs</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="btn-theme"
+            aria-label="Cambiar tema"
+            title="Cambiar tema"
+          >
+            <span id="theme-icon">🌙</span>
+          </button>
 
-      <div class="nav-actions">
-        <button id="theme-toggle" class="btn-theme" aria-label="Cambiar tema" title="Cambiar tema">
-          <span id="theme-icon">🌙</span>
-        </button>
+          <a
+            href="assets/CV_Karen_Daniela_Diaz_Software.pdf"
+            download
+            class="btn-cv"
+            aria-label="Descargar CV"
+          >
+            <i class="bi bi-download me-1"></i> CV
+          </a>
 
-        <a href="assets/CV_Karen_Daniela_Diaz_Software.pdf" download class="btn-cv" aria-label="Descargar CV">
-          <i class="bi bi-download me-1"></i> CV
-        </a>
-
-        <button class="nav-hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+          <button
+            class="nav-hamburger"
+            id="hamburger"
+            aria-label="Menú"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
+    </nav>
 
-    </div>
-  </nav>
-
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        HERO
   ════════════════════════════════════════════ -->
-  <section id="hero" aria-label="Presentación">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <section id="hero" aria-label="Presentación">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-    <!-- Orbes decorativos -->
-    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+      <!-- Orbes decorativos -->
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
 
-    <div class="container">
-      <div class="hero-content">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge"><i class="bi bi-geo-alt"></i> Colombia</div>
 
-        <div class="hero-badge">
-          <i class="bi bi-geo-alt"></i> Colombia
-        </div>
+          <h1 class="hero-name">
+            Karen Daniela<br />
+            <span class="gradient-text">Díaz Tróchez</span>
+          </h1>
 
-        <h1 class="hero-name">
-          Karen Daniela<br>
-          <span class="gradient-text">Díaz Tróchez</span>
-        </h1>
+          <p class="hero-role">
+            <span id="typed-text"></span><span class="cursor-blink">|</span>
+          </p>
 
-        <p class="hero-role">
-          <span id="typed-text"></span><span class="cursor-blink">|</span>
-        </p>
+          <p class="hero-desc">
+            Desarrolladora de software especializada en
+            <strong>APIs REST con Python</strong>, pipelines
+            <strong>ETL</strong>, automatización y visualización de datos con
+            <strong>Power BI</strong>. Actualmente en formación Full Stack.
+          </p>
 
-        <p class="hero-desc">
-          Desarrolladora de software especializada en <strong>APIs REST con Python</strong>,
-          pipelines <strong>ETL</strong>, automatización y visualización de datos con
-          <strong>Power BI</strong>. Actualmente en formación Full Stack.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="mailto:calidad8844@gmail.com?subject=Hola Karen, vi tu portafolio" class="btn-primary">
-            <i class="bi bi-envelope-fill"></i> Escríbeme
-          </a>
-          <a href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
-            target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-            <i class="bi bi-whatsapp"></i> WhatsApp
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-count="95" data-suffix="%" aria-label="95 por ciento">0</span>
-            <span class="hero-stat-label">reducción de<br>tareas manuales</span>
+          <div class="hero-ctas">
+            <a
+              href="mailto:calidad8844@gmail.com?subject=Hola Karen, vi tu portafolio"
+              class="btn-primary"
+            >
+              <i class="bi bi-envelope-fill"></i> Escríbeme
+            </a>
+            <a
+              href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whatsapp"
+            >
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-count="6" data-suffix="+" aria-label="Más de 6">0</span>
-            <span class="hero-stat-label">certificaciones<br>obtenidas</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-count="15" data-suffix="+" aria-label="15">0</span>
-            <span class="hero-stat-label">skills<br>practicadas</span>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span
+                class="hero-stat-num"
+                data-count="95"
+                data-suffix="%"
+                aria-label="95 por ciento"
+                >0</span
+              >
+              <span class="hero-stat-label"
+                >reducción de<br />tareas manuales</span
+              >
+            </div>
+            <div class="hero-stat">
+              <span
+                class="hero-stat-num"
+                data-count="6"
+                data-suffix="+"
+                aria-label="Más de 6"
+                >0</span
+              >
+              <span class="hero-stat-label"
+                >certificaciones<br />obtenidas</span
+              >
+            </div>
+            <div class="hero-stat">
+              <span
+                class="hero-stat-num"
+                data-count="15"
+                data-suffix="+"
+                aria-label="15"
+                >0</span
+              >
+              <span class="hero-stat-label">skills<br />practicadas</span>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        SOBRE MÍ
   ════════════════════════════════════════════ -->
-  <section id="sobre" class="section" aria-label="Sobre mí">
-    <div class="section-inner">
+    <section id="sobre" class="section" aria-label="Sobre mí">
+      <div class="section-inner">
+        <p class="sec-eyebrow">01 — Sobre mí</p>
+        <h2 class="sec-title">
+          Tecnóloga en<br /><span class="accent">Desarrollo de Software</span>
+        </h2>
 
-      <p class="sec-eyebrow">01 — Sobre mí</p>
-      <h2 class="sec-title">Tecnóloga en<br><span class="accent">Desarrollo de Software</span></h2>
-
-      <div class="about-grid reveal">
-
-        <div class="about-avatar-wrap">
-          <div class="about-avatar-glow" aria-hidden="true"></div>
-          <div class="about-avatar" aria-label="Foto de perfil">
-            <div class="about-avatar-inner">
-              <img src="assets/kdt_dev.png" alt="Karen Daniela Díaz Trochez — Desarrolladora Backend">
+        <div class="about-grid reveal">
+          <div class="about-avatar-wrap">
+            <div class="about-avatar-glow" aria-hidden="true"></div>
+            <div class="about-avatar" aria-label="Foto de perfil">
+              <div class="about-avatar-inner">
+                <img
+                  src="assets/kdt_dev.png"
+                  alt="Karen Daniela Díaz Trochez — Desarrolladora Backend"
+                />
+              </div>
             </div>
           </div>
 
-        </div>
+          <div>
+            <p class="about-bio">
+              Desarrolladora de software con experiencia en la construcción de
+              APIs en <strong>Python</strong>, implementación de soluciones de
+              automatización y web scraping para el procesamiento y
+              <strong>análisis de datos con Power BI</strong>. Cuento con
+              conocimientos en desarrollo backend con
+              <strong>Java y Spring Boot</strong>, y actualmente curso el
+              Bootcamp Generation Colombia Full Stack.
+            </p>
 
-        <div>
-         
-          <p class="about-bio">
-            Desarrolladora de software con experiencia en la construcción de APIs en <strong>Python</strong>, implementación de soluciones de 
-            automatización y web scraping para el procesamiento y <strong>análisis de datos con Power BI</strong>. 
-            Cuento con conocimientos en desarrollo backend con <strong>Java y Spring Boot</strong>, y actualmente curso el Bootcamp Generation Colombia Full Stack.
-          </p>
-         
-          
-
-          <div class="about-pills">
-            <span class="pill"><i class="bi bi-geo-alt-fill"></i> Popayán, Colombia</span>
-            <span class="pill">🐍 Python</span>
-            <span class="pill">☕ Java</span>
-            <span class="pill">📊 Power BI</span>
-            <span class="pill">🔄 ETL Pipelines</span>
-            <span class="pill">🌐 Full Stack (en formación)</span>
+            <div class="about-pills">
+              <span class="pill"
+                ><i class="bi bi-geo-alt-fill"></i> Popayán, Colombia</span
+              >
+              <span class="pill">🐍 Python</span>
+              <span class="pill">☕ Java</span>
+              <span class="pill">📊 Power BI</span>
+              <span class="pill">🔄 ETL Pipelines</span>
+              <span class="pill">🌐 Full Stack (en formación)</span>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        HABILIDADES
   ════════════════════════════════════════════ -->
-  <section id="skills" class="section" aria-label="Habilidades">
-    <div class="section-inner">
+    <section id="skills" class="section" aria-label="Habilidades">
+      <div class="section-inner">
+        <p class="sec-eyebrow">02 — Habilidades</p>
+        <h2 class="sec-title">Stack <span class="accent">tecnológico</span></h2>
 
-      <p class="sec-eyebrow">02 — Habilidades</p>
-      <h2 class="sec-title">Stack <span class="accent">tecnológico</span></h2>
+        <!-- Filtros -->
+        <div
+          class="skills-filter"
+          role="group"
+          aria-label="Filtrar habilidades"
+        >
+          <button class="filter-btn active" data-filter="all">Todos</button>
 
-      <!-- Filtros -->
-      <div class="skills-filter" role="group" aria-label="Filtrar habilidades">
-        <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="data">Data</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
 
-        <button class="filter-btn" data-filter="data">Data</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <!-- <button class="filter-btn" data-filter="db">Bases de datos</button> -->
+          <button class="filter-btn" data-filter="tools">Herramientas</button>
+          <button class="filter-btn" data-filter="agile">Metodologías</button>
+          <button class="filter-btn" data-filter="network">Redes</button>
+        </div>
 
-        <!-- <button class="filter-btn" data-filter="db">Bases de datos</button> -->
-        <button class="filter-btn" data-filter="tools">Herramientas</button>
-        <button class="filter-btn" data-filter="agile">Metodologías</button>
-        <button class="filter-btn" data-filter="network">Redes</button>
+        <!-- Grid de skills -->
+        <div class="skills-grid reveal" id="skills-grid">
+          <!-- BACKEND -->
+          <div class="skill-card" data-cat="backend data">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">Python</div>
+            <div class="skill-cat">Backend | Data</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="90"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">Java</div>
+            <div class="skill-cat">Backend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="74"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">FastAPI</div>
+            <div class="skill-cat">Backend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="86"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">Spring Boot</div>
+            <div class="skill-cat">Backend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-emoji">🔗</span>
+            <div class="skill-name">REST APIs</div>
+            <div class="skill-cat">Backend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="88"></div>
+            </div>
+          </div>
 
+          <!-- DATOS -->
+          <div class="skill-card" data-cat="data">
+            <span class="skill-emoji">📊</span>
+            <div class="skill-name">Power BI</div>
+            <div class="skill-cat">Datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="data">
+            <span class="skill-emoji">🔄</span>
+            <div class="skill-name">ETL Pipelines</div>
+            <div class="skill-cat">Datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="82"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="data">
+            <span class="skill-emoji">🕷️</span>
+            <div class="skill-name">Web Scraping</div>
+            <div class="skill-cat">Datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="88"></div>
+            </div>
+          </div>
+
+          <!-- FRONTEND -->
+          <div class="skill-card" data-cat="frontend">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt="Js-logo"
+              class="skill-icon js-icon"
+            />
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-cat">frontend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="70"></div>
+            </div>
+          </div>
+
+          <!-- DB -->
+          <div class="skill-card" data-cat="data">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+              alt="SQL"
+              class="skill-icon"
+            />
+            <div class="skill-name">PostgreSQL</div>
+            <div class="skill-cat">Base de datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="78"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-cat="data">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+              alt="SQL"
+              class="skill-icon"
+            />
+            <div class="skill-name">MySQL</div>
+            <div class="skill-cat">Base de datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="78"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="data">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">MongoDB</div>
+            <div class="skill-cat">Base de datos</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="75"></div>
+            </div>
+          </div>
+
+          <!-- TOOLS -->
+          <div class="skill-card" data-cat="tools">
+            <i class="devicon-github-original skill-icon-i"></i>
+            <div class="skill-name">Git / GitHub</div>
+            <div class="skill-cat">Control de versiones</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="85"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="tools">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+              alt="Python"
+              class="skill-icon"
+            />
+            <div class="skill-name">Google Cloud</div>
+            <div class="skill-cat">Cloud</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="60"></div>
+            </div>
+          </div>
+          <div class="skill-card" data-cat="tools">
+            <i class="bi bi-bootstrap skill-icon-i"></i>
+            <div class="skill-name">Bootstrap</div>
+            <div class="skill-cat">Frontend</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="68"></div>
+            </div>
+          </div>
+          <!-- Resdes -->
+          <div class="skill-card" data-cat="network">
+            <span class="skill-emoji">🌐</span>
+            <div class="skill-name">Networking</div>
+            <div class="skill-cat">Redes</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="85"></div>
+            </div>
+          </div>
+
+          <!-- AGILE -->
+          <div class="skill-card" data-cat="agile">
+            <span class="skill-emoji">🔁</span>
+            <div class="skill-name">Scrum</div>
+            <div class="skill-cat">Metodologías Ágiles</div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Grid de skills -->
-      <div class="skills-grid reveal" id="skills-grid">
-
-        <!-- BACKEND -->
-        <div class="skill-card" data-cat="backend data">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"
-            class="skill-icon" />
-          <div class="skill-name">Python</div>
-          <div class="skill-cat">Backend | Data</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="90"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Python"
-            class="skill-icon" />
-          <div class="skill-name">Java</div>
-          <div class="skill-cat">Backend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="74"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="Python"
-            class="skill-icon" />
-          <div class="skill-name">FastAPI</div>
-          <div class="skill-cat">Backend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="86"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Python"
-            class="skill-icon" />
-          <div class="skill-name">Spring Boot</div>
-          <div class="skill-cat">Backend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="70"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="backend">
-          <span class="skill-emoji">🔗</span>
-          <div class="skill-name">REST APIs</div>
-          <div class="skill-cat">Backend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="88"></div>
-          </div>
-        </div>
-
-        <!-- DATOS -->
-        <div class="skill-card" data-cat="data">
-          <span class="skill-emoji">📊</span>
-          <div class="skill-name">Power BI</div>
-          <div class="skill-cat">Datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="80"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="data">
-          <span class="skill-emoji">🔄</span>
-          <div class="skill-name">ETL Pipelines</div>
-          <div class="skill-cat">Datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="82"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="data">
-          <span class="skill-emoji">🕷️</span>
-          <div class="skill-name">Web Scraping</div>
-          <div class="skill-cat">Datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="88"></div>
-          </div>
-        </div>
-
-        <!-- FRONTEND -->
-        <div class="skill-card" data-cat="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-            alt="Js-logo" class="skill-icon js-icon" />
-          <div class="skill-name">JavaScript</div>
-          <div class="skill-cat">frontend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="70"></div>
-          </div>
-        </div>
-
-        <!-- DB -->
-        <div class="skill-card" data-cat="data">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
-            alt="SQL" class="skill-icon" />
-          <div class="skill-name"> PostgreSQL</div>
-          <div class="skill-cat">Base de datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="78"></div>
-          </div>
-        </div>
-
-        <div class="skill-card" data-cat="data">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL"
-            class="skill-icon" />
-          <div class="skill-name"> MySQL</div>
-          <div class="skill-cat">Base de datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="78"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="data">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="Python"
-            class="skill-icon" />
-          <div class="skill-name">MongoDB</div>
-          <div class="skill-cat">Base de datos</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="75"></div>
-          </div>
-        </div>
-
-        <!-- TOOLS -->
-        <div class="skill-card" data-cat="tools">
-          <i class="devicon-github-original skill-icon-i"></i>
-          <div class="skill-name">Git / GitHub</div>
-          <div class="skill-cat">Control de versiones</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
-            alt="Python" class="skill-icon" />
-          <div class="skill-name">Google Cloud</div>
-          <div class="skill-cat">Cloud</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="60"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-cat="tools">
-          <i class="bi bi-bootstrap skill-icon-i"></i>
-          <div class="skill-name">Bootstrap</div>
-          <div class="skill-cat">Frontend</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="68"></div>
-          </div>
-        </div>
-        <!-- Resdes -->
-        <div class="skill-card" data-cat="network">
-          <span class="skill-emoji">🌐</span>
-          <div class="skill-name">Networking</div>
-          <div class="skill-cat">Redes</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="85"></div>
-          </div>
-        </div>
-
-        <!-- AGILE -->
-        <div class="skill-card" data-cat="agile">
-          <span class="skill-emoji">🔁</span>
-          <div class="skill-name">Scrum</div>
-          <div class="skill-cat">Metodologías Ágiles</div>
-          <div class="skill-bar">
-            <div class="skill-fill" data-w="80"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        EXPERIENCIA
   ════════════════════════════════════════════ -->
-  <section id="experiencia" class="section" aria-label="Experiencia">
-    <div class="section-inner">
+    <section id="experiencia" class="section" aria-label="Experiencia">
+      <div class="section-inner">
+        <p class="sec-eyebrow">03 — Trayectoria</p>
+        <h2 class="sec-title">
+          Experiencia &<br /><span class="accent">Educación</span>
+        </h2>
 
-      <p class="sec-eyebrow">03 — Trayectoria</p>
-      <h2 class="sec-title">Experiencia &<br><span class="accent">Educación</span></h2>
+        <div class="timeline reveal">
+          <!-- ── Cisco ── -->
+          <div class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <p class="tl-date">
+                <i class="bi bi-briefcase-fill me-1"></i>
+              </p>
+              <h3 class="tl-role">
+                Intern · Desarrollo de Software · Bogotá, Colombia
+              </h3>
+              <p class="tl-company">Cisco Systems</p>
+              <ul class="tl-bullets"></ul>
+              <div class="tag-list">
+                <span class="tag tag-purple">Python</span>
+                <span class="tag tag-purple">FastAPI</span>
+                <span class="tag tag-purple">ETL</span>
+                <span class="tag tag-purple">MongoDB Atlas</span>
+                <span class="tag tag-purple">Power BI</span>
+                <span class="tag tag-purple">Web Scraping</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="timeline reveal">
+          <!-- ── Generation Colombia ── -->
+          <div class="tl-item edu">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <p class="tl-date">
+                <i class="bi bi-mortarboard-fill me-1"></i>
+              </p>
+              <h3 class="tl-role">Desarrolladora Junior Full Stack · Java</h3>
+              <p class="tl-company">Bootcamp Generation Colombia</p>
+              <div class="tag-list">
+                <span class="tag tag-teal">Java</span>
+                <span class="tag tag-teal">Spring Boot</span>
+                <span class="tag tag-teal">Java Script</span>
+                <span class="tag tag-teal">Boostrap</span>
+                <span class="tag tag-teal">MySql</span>
+                <span class="tag tag-teal">Lógica</span>
+                <span class="tag tag-teal">Full Stack</span>
+                <span class="tag tag-teal">En curso</span>
+              </div>
+            </div>
+          </div>
 
-        <!-- ── Cisco ── -->
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-card">
-            <p class="tl-date">
-              <i class="bi bi-briefcase-fill me-1"></i>
-             
-            </p>
-            <h3 class="tl-role">Intern · Desarrollo de Software · Bogotá, Colombia</h3>
-            <p class="tl-company">Cisco Systems</p>
-            <ul class="tl-bullets">
-             
-            
-            </ul>
-            <div class="tag-list">
-              <span class="tag tag-purple">Python</span>
-              <span class="tag tag-purple">FastAPI</span>
-              <span class="tag tag-purple">ETL</span>
-              <span class="tag tag-purple">MongoDB Atlas</span>
-              <span class="tag tag-purple">Power BI</span>
-              <span class="tag tag-purple">Web Scraping</span>
+          <!-- ── SENA ── -->
+          <div class="tl-item edu">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <p class="tl-date">
+                <i class="bi bi-mortarboard-fill me-1"></i>
+                JUNIO 2023 — OCTUBRE 2025
+              </p>
+              <h3 class="tl-role">
+                Tecnóloga en Análisis y Desarrollo de Software
+              </h3>
+              <p class="tl-company">SENA</p>
+              <div class="tag-list">
+                <span class="tag tag-teal">Java</span>
+                <span class="tag tag-teal">Angular</span>
+                <span class="tag tag-teal">Laravel</span>
+                <span class="tag tag-teal">Postman</span>
+                <span class="tag tag-teal">Figma</span>
+                <span class="tag tag-teal">Documentación</span>
+                <span class="tag tag-teal">SQL</span>
+                <span class="tag tag-teal">MongoDB</span>
+                <span class="tag tag-teal">Scrum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Universidad ── -->
+          <div class="tl-item edu">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <p class="tl-date">
+                <i class="bi bi-mortarboard-fill me-1"></i>
+              </p>
+              <h3 class="tl-role">Ingeniera Industrial</h3>
+              <p class="tl-company">Fundación Universitaria de Popayán</p>
+
+              <div class="tag-list">
+                <span class="tag tag-teal">Estadistica</span>
+                <span class="tag tag-teal">KPI</span>
+                <span class="tag tag-teal">Análisis Cuantitativo</span>
+                <span class="tag tag-teal">Cálculo</span>
+                <span class="tag tag-teal">Probabilidad</span>
+                <span class="tag tag-teal">Modelado Matemático</span>
+                <span class="tag tag-teal">Toma de Decisiones</span>
+                <span class="tag tag-teal">Optimización de Procesos</span>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- ── Generation Colombia ── -->
-        <div class="tl-item edu">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-card">
-            <p class="tl-date">
-              <i class="bi bi-mortarboard-fill me-1"></i>
-            
-            </p>
-            <h3 class="tl-role">Desarrolladora Junior Full Stack · Java</h3>
-            <p class="tl-company">Bootcamp Generation Colombia</p>
-            <div class="tag-list">
-              <span class="tag tag-teal">Java</span>
-              <span class="tag tag-teal">Spring Boot</span>
-              <span class="tag tag-teal">Java Script</span>
-              <span class="tag tag-teal">Boostrap</span>
-              <span class="tag tag-teal">MySql</span>
-              <span class="tag tag-teal">Lógica</span>
-              <span class="tag tag-teal">Full Stack</span>
-              <span class="tag tag-teal">En curso</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ── SENA ── -->
-        <div class="tl-item edu">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-card">
-            <p class="tl-date">
-              <i class="bi bi-mortarboard-fill me-1"></i>
-              JUNIO 2023 — OCTUBRE 2025
-            </p>
-            <h3 class="tl-role">Tecnóloga en Análisis y Desarrollo de Software </h3>
-            <p class="tl-company">SENA</p>
-            <div class="tag-list">
-              <span class="tag tag-teal">Java</span>
-              <span class="tag tag-teal">Angular</span>
-              <span class="tag tag-teal">Laravel</span>
-              <span class="tag tag-teal">Postman</span>
-              <span class="tag tag-teal">Figma</span>
-              <span class="tag tag-teal">Documentación</span>
-              <span class="tag tag-teal">SQL</span>
-              <span class="tag tag-teal">MongoDB</span>
-              <span class="tag tag-teal">Scrum</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ── Universidad ── -->
-        <div class="tl-item edu">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-card">
-            <p class="tl-date">
-              <i class="bi bi-mortarboard-fill me-1"></i>
-             
-            </p>
-            <h3 class="tl-role">Ingeniera Industrial</h3>
-            <p class="tl-company">Fundación Universitaria de Popayán</p>
-
-            <div class="tag-list">
-              <span class="tag tag-teal">Estadistica</span>
-              <span class="tag tag-teal">KPI</span>
-              <span class="tag tag-teal">Análisis Cuantitativo</span>
-              <span class="tag tag-teal">Cálculo</span>
-              <span class="tag tag-teal">Probabilidad</span>
-              <span class="tag tag-teal">Modelado Matemático</span>
-              <span class="tag tag-teal">Toma de Decisiones</span>
-              <span class="tag tag-teal">Optimización de Procesos</span>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        PROYECTOS
   ════════════════════════════════════════════ -->
-  <section id="proyectos" class="section" aria-label="Proyectos">
-    <div class="section-inner">
+    <section id="proyectos" class="section" aria-label="Proyectos">
+      <div class="section-inner">
+        <p class="sec-eyebrow">04 — Proyectos</p>
+        <h2 class="sec-title">
+          Lo que se está<br /><span class="accent">construyendo</span>
+        </h2>
 
-      <p class="sec-eyebrow">04 — Proyectos</p>
-      <h2 class="sec-title">Lo que se está<br><span class="accent">construyendo</span></h2>
+        <!--  Banner / Estado de sección -->
+        <div class="projects-status reveal">
+          <div class="projects-status-inner">
+            <p class="status-eyebrow">estado:</p>
 
-      <!--  Banner / Estado de sección -->
-      <div class="projects-status reveal">
-        <div class="projects-status-inner">
-          <p class="status-eyebrow">estado:</p>
+            <h3 class="status-title">
+              cocinando algo mejor… <span class="blink">_</span>
+            </h3>
 
-          <h3 class="status-title">
-            cocinando algo mejor… <span class="blink">_</span>
-          </h3>
-
-          <p class="status-desc">
-            esta sección está en refactorización activa.
-
-            los proyectos estarán disponibles pronto 🚀
-          </p>
-        </div>
-      </div>
-
-
-
-      <div class="projects-grid">
-
-                <!-- Proyecto 1: Ecommerce -->
-        <div class="proj-flip-wrapper reveal" role="article" aria-label="Proyecto IA">
-          <div class="proj-flip-inner">
-
-            <!-- Frente -->
-            <div class="proj-front">
-
-              <!-- Imagen -->
-              <div class="proj-image-wrap">
-                <img src="assets/proyectos/klady.jpg" alt="Preview landing page" class="proj-image">
-              </div>
-
-              <!-- Status (overlay arriba) -->
-              <div class="proj-front-header overlay-top">
-                <span class="proj-status active">COMPLETADO</span>
-              </div>
-
-              <!-- Nombre (overlay abajo) -->
-              <div class="overlay-bottom">
-                <h3 class="proj-name">
-                  E-commerce API  <span class="highlight-silver">Con IA</span> 
-                </h3>
-              </div>
-
-            </div>
-
-            <!-- Dorso -->
-            <div class="proj-back">
-              <div>
-                <h3 class="proj-back-title">Landing Page Interactiva 🏆</h3>
-
-                <p class="proj-back-desc">
-                  Autenticación JWT, gestión de roles y rutas protegidas.
-                  Incluye asistente virtual con NLP para soporte y recomendaciones inteligentes en compras....
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7472397501963145216/" target="_blank"
-                    class="proj-more">más</a>
-                </p>
-                <div class="proj-back-links">
-                  <a href="https://karen-daniela-dev.github.io/ecommerce-ia/" target="_blank"
-                    class="btn-outline-sm">
-                    <i class="bi bi-play-fill"></i> Ver Demo
-                  </a>
-                  <a href="https://github.com/karen-daniela-dev/ecommerce-backend-ia" target="_blank" class="btn-outline-sm">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-
-                <div class="proj-back-tags">
-                  <span class="tag tag-purple">Java</span>
-                  <span class="tag tag-purple">JWT</span>
-                   <span class="tag tag-teal">Asistente Virtual AI</span>
-                  <span class="tag tag-teal">Bootstrap</span>
-                  <span class="tag tag-teal">Git</span>
-                  <span class="tag tag-teal">Responsive</span>
-                </div>
-              </div>
-
-            </div>
-
+            <p class="status-desc">
+              esta sección está en refactorización activa. los proyectos estarán
+              disponibles pronto 🚀
+            </p>
           </div>
         </div>
 
-
-
-
-    
-
-        <!-- Proyecto 2: hackathon hamburguesa -->
-        <div class="proj-flip-wrapper reveal" role="article" aria-label="Proyecto Hackathon">
-          <div class="proj-flip-inner">
-
-            <!-- Frente -->
-            <div class="proj-front">
-
-              <!-- Imagen -->
-              <div class="proj-image-wrap">
-                <img src="assets/proyectos/hero.png" alt="Preview landing page" class="proj-image">
-              </div>
-
-              <!-- Status (overlay arriba) -->
-              <div class="proj-front-header overlay-top">
-                <span class="proj-status active">COMPLETADO</span>
-              </div>
-
-              <!-- Nombre (overlay abajo) -->
-              <div class="overlay-bottom">
-                <h3 class="proj-name">
-                  Landing Page <span class="highlight-silver"> 🏆 2do Puesto</span> — Hackathon 2026
-                </h3>
-              </div>
-
-            </div>
-
-            <!-- Dorso -->
-            <div class="proj-back">
-              <div>
-                <h3 class="proj-back-title">Landing Page Interactiva 🏆</h3>
-
-                <p class="proj-back-desc">
-                  Landing page interactiva con sistema de carrito de compras,
-                  gestión dinámica de productos y envío de pedidos a través de WhatsApp.
-                  Enfocada en experiencia de usuario y diseño responsive...
-                  <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7457491354768551937/" target="_blank"
-                    class="proj-more">más</a>
-                </p>
-                <div class="proj-back-links">
-                  <a href="https://karen-daniela-dev.github.io/Hacakthon-LandingPage/" target="_blank"
-                    class="btn-outline-sm">
-                    <i class="bi bi-play-fill"></i> Ver Demo
-                  </a>
-                  <a href="https://github.com/karen-daniela-dev/Hacakthon-LandingPage" target="_blank" class="btn-outline-sm">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
+        <div class="projects-grid">
+          <!-- Proyecto 1: Ecommerce -->
+          <div
+            class="proj-flip-wrapper reveal"
+            role="article"
+            aria-label="Proyecto IA"
+          >
+            <div class="proj-flip-inner">
+              <!-- Frente -->
+              <div class="proj-front">
+                <!-- Imagen -->
+                <div class="proj-image-wrap">
+                  <img
+                    src="assets/proyectos/klady.jpg"
+                    alt="Preview landing page"
+                    class="proj-image"
+                  />
                 </div>
 
-                <div class="proj-back-tags">
-                  <span class="tag tag-purple">JavaScript</span>
-                  <span class="tag tag-purple">CSS</span>
-                  <span class="tag tag-teal">Bootstrap</span>
-                  <span class="tag tag-teal">Git</span>
-                  <span class="tag tag-teal">WhatsApp</span>
-                  <span class="tag tag-teal">Responsive</span>
+                <!-- Status (overlay arriba) -->
+                <div class="proj-front-header overlay-top">
+                  <span class="proj-status active">COMPLETADO</span>
+                </div>
+
+                <!-- Nombre (overlay abajo) -->
+                <div class="overlay-bottom">
+                  <h3 class="proj-name">
+                    E-commerce API <span class="highlight-silver">Con IA</span>
+                  </h3>
                 </div>
               </div>
 
-            </div>
+              <!-- Dorso -->
+              <div class="proj-back">
+                <div>
+                  <h3 class="proj-back-title">Landing Page Interactiva 🏆</h3>
 
+                  <p class="proj-back-desc">
+                    Autenticación JWT, gestión de roles y rutas protegidas.
+                    Incluye asistente virtual con NLP para soporte y
+                    recomendaciones inteligentes en compras....
+                    <a
+                      href="https://www.linkedin.com/feed/update/urn:li:activity:7472397501963145216/"
+                      target="_blank"
+                      class="proj-more"
+                      >más</a
+                    >
+                  </p>
+                  <div class="proj-back-links">
+                    <a
+                      href="https://karen-daniela-dev.github.io/ecommerce-ia/"
+                      target="_blank"
+                      class="btn-outline-sm"
+                    >
+                      <i class="bi bi-play-fill"></i> Ver Demo
+                    </a>
+                    <a
+                      href="https://github.com/karen-daniela-dev/ecommerce-backend-ia"
+                      target="_blank"
+                      class="btn-outline-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                  </div>
+
+                  <div class="proj-back-tags">
+                    <span class="tag tag-purple">Java</span>
+                    <span class="tag tag-purple">JWT</span>
+                    <span class="tag tag-teal">Asistente Virtual AI</span>
+                    <span class="tag tag-teal">Bootstrap</span>
+                    <span class="tag tag-teal">Git</span>
+                    <span class="tag tag-teal">Responsive</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2: hackathon hamburguesa -->
+          <div
+            class="proj-flip-wrapper reveal"
+            role="article"
+            aria-label="Proyecto Hackathon"
+          >
+            <div class="proj-flip-inner">
+              <!-- Frente -->
+              <div class="proj-front">
+                <!-- Imagen -->
+                <div class="proj-image-wrap">
+                  <img
+                    src="assets/proyectos/hero.png"
+                    alt="Preview landing page"
+                    class="proj-image"
+                  />
+                </div>
+
+                <!-- Status (overlay arriba) -->
+                <div class="proj-front-header overlay-top">
+                  <span class="proj-status active">COMPLETADO</span>
+                </div>
+
+                <!-- Nombre (overlay abajo) -->
+                <div class="overlay-bottom">
+                  <h3 class="proj-name">
+                    Landing Page
+                    <span class="highlight-silver"> 🏆 2do Puesto</span> —
+                    Hackathon 2026
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Dorso -->
+              <div class="proj-back">
+                <div>
+                  <h3 class="proj-back-title">Landing Page Interactiva 🏆</h3>
+
+                  <p class="proj-back-desc">
+                    Landing page interactiva con sistema de carrito de compras,
+                    gestión dinámica de productos y envío de pedidos a través de
+                    WhatsApp. Enfocada en experiencia de usuario y diseño
+                    responsive...
+                    <a
+                      href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7457491354768551937/"
+                      target="_blank"
+                      class="proj-more"
+                      >más</a
+                    >
+                  </p>
+                  <div class="proj-back-links">
+                    <a
+                      href="https://karen-daniela-dev.github.io/Hacakthon-LandingPage/"
+                      target="_blank"
+                      class="btn-outline-sm"
+                    >
+                      <i class="bi bi-play-fill"></i> Ver Demo
+                    </a>
+                    <a
+                      href="https://github.com/karen-daniela-dev/Hacakthon-LandingPage"
+                      target="_blank"
+                      class="btn-outline-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                  </div>
+
+                  <div class="proj-back-tags">
+                    <span class="tag tag-purple">JavaScript</span>
+                    <span class="tag tag-purple">CSS</span>
+                    <span class="tag tag-teal">Bootstrap</span>
+                    <span class="tag tag-teal">Git</span>
+                    <span class="tag tag-teal">WhatsApp</span>
+                    <span class="tag tag-teal">Responsive</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-       
-
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        CERTIFICACIONES
   ════════════════════════════════════════════ -->
-  <section id="certificaciones" class="section" aria-label="Certificaciones">
+    <section id="certificaciones" class="section" aria-label="Certificaciones">
+      <div class="section-inner">
+        <p class="sec-eyebrow">05 — Credenciales</p>
+        <h2 class="sec-title">
+          Certificaciones<br /><span class="accent">obtenidas</span>
+        </h2>
 
-    <div class="section-inner">
-
-      <p class="sec-eyebrow">05 — Credenciales</p>
-      <h2 class="sec-title">Certificaciones<br><span class="accent">obtenidas</span></h2>
-
-      <div class="certs-grid reveal">
-
-       
+        <div class="certs-grid reveal">
           <div class="cert-card">
             <div class="cert-org-badge org-cisco" aria-label="Cisco">🔵</div>
             <div>
@@ -672,168 +768,199 @@
               <p class="cert-meta">Cisco · 2025</p>
             </div>
           </div>
-       
 
-        <div class="cert-card">
-          <div class="cert-org-badge org-cisco" aria-label="Cisco">🔵</div>
-          <div>
-            <p class="cert-name">Python Essentials</p>
-            <p class="cert-meta">Cisco · 2025</p>
+          <div class="cert-card">
+            <div class="cert-org-badge org-cisco" aria-label="Cisco">🔵</div>
+            <div>
+              <p class="cert-name">Python Essentials</p>
+              <p class="cert-meta">Cisco · 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-org-badge org-google" aria-label="Google">🟦</div>
+            <div>
+              <p class="cert-name">
+                Google Cloud Fundamentals: Core Infrastructure
+              </p>
+              <p class="cert-meta">Google · 2024</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+            <div>
+              <p class="cert-name">ONE — Java y Spring Boot G5</p>
+              <p class="cert-meta">Alura Latam · 2023</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+            <div>
+              <p class="cert-name">ONE — Business Agility / Scrum</p>
+              <p class="cert-meta">Alura Latam · 2023</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
+            <div>
+              <p class="cert-name">ONE — Software Orientado a Objetos</p>
+              <p class="cert-meta">Alura Latam · 2023</p>
+            </div>
           </div>
         </div>
-
-        <div class="cert-card">
-          <div class="cert-org-badge org-google" aria-label="Google">🟦</div>
-          <div>
-            <p class="cert-name">Google Cloud Fundamentals: Core Infrastructure</p>
-            <p class="cert-meta">Google · 2024</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
-          <div>
-            <p class="cert-name">ONE — Java y Spring Boot G5</p>
-            <p class="cert-meta">Alura Latam · 2023</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
-          <div>
-            <p class="cert-name">ONE — Business Agility / Scrum</p>
-            <p class="cert-meta">Alura Latam · 2023</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-org-badge org-oracle" aria-label="Oracle">🟠</div>
-          <div>
-            <p class="cert-name">ONE — Software Orientado a Objetos</p>
-            <p class="cert-meta">Alura Latam · 2023</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        CONTACTO
   ════════════════════════════════════════════ -->
-  <section id="contacto" class="section" aria-label="Contacto">
-    <div class="section-inner">
+    <section id="contacto" class="section" aria-label="Contacto">
+      <div class="section-inner">
+        <p class="sec-eyebrow">06 — Contacto</p>
+        <h2 class="sec-title">
+          Encuéntrame<br /><span class="accent">en estos canales</span>
+        </h2>
 
-      <p class="sec-eyebrow">06 — Contacto</p>
-      <h2 class="sec-title">Encuéntrame<br><span class="accent">en estos canales</span></h2>
+        <div class="contact-grid reveal">
+          <!-- Izquierda -->
+          <div>
+            <div class="contact-links">
+              <a
+                href="mailto:calidad8844@gmail.com?subject=Hola Karen, vi tu portafolio"
+                class="contact-link-btn email"
+              >
+                <div class="clb-icon ico-email">✉️</div>
+                <div class="clb-info">
+                  <div class="clb-name">Correo electrónico</div>
+                  <div class="clb-val">calidad8844@gmail.com</div>
+                </div>
+                <span class="clb-arrow">›</span>
+              </a>
 
-      <div class="contact-grid reveal">
+              <a
+                href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link-btn wa"
+              >
+                <div class="clb-icon ico-wa">💬</div>
+                <div class="clb-info">
+                  <div class="clb-name">WhatsApp</div>
+                  <div class="clb-val">+57 311 722 6230</div>
+                </div>
+                <span class="clb-arrow">›</span>
+              </a>
 
-        <!-- Izquierda -->
-        <div>
-       
-          <div class="contact-links">
+              <a
+                href="https://www.linkedin.com/in/karen-diaz-trochez-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link-btn linkedin"
+              >
+                <div class="clb-icon ico-linkedin">in</div>
+                <div class="clb-info">
+                  <div class="clb-name">LinkedIn</div>
+                  <!-- <div class="clb-val">karen-diaz-trochez-dev</div> -->
+                </div>
+                <span class="clb-arrow">›</span>
+              </a>
 
-            <a href="mailto:calidad8844@gmail.com?subject=Hola Karen, vi tu portafolio" class="contact-link-btn email">
-              <div class="clb-icon ico-email">✉️</div>
-              <div class="clb-info">
-                <div class="clb-name">Correo electrónico</div>
-                <div class="clb-val">calidad8844@gmail.com</div>
-              </div>
-              <span class="clb-arrow">›</span>
+              <a
+                href="https://github.com/karen-daniela-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link-btn github"
+              >
+                <div class="clb-icon ico-github">
+                  <i class="bi bi-github"></i>
+                </div>
+                <div class="clb-info">
+                  <div class="clb-name">GitHub</div>
+                  <!-- <div class="clb-val">daniela-trochez</div> -->
+                </div>
+                <span class="clb-arrow">›</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Derecha -->
+          <div class="contact-panel">
+            <div class="status-indicator">
+              <div class="status-dot" aria-hidden="true"></div>
+              DISPONIBLE
+            </div>
+
+            <a
+              href="assets/CV_Karen_Daniela_Diaz_Software.pdf"
+              download
+              class="btn-cv-big"
+            >
+              <i class="bi bi-download me-2"></i> Descargar CV completo
             </a>
 
-            <a href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
-              target="_blank" rel="noopener noreferrer" class="contact-link-btn wa">
-              <div class="clb-icon ico-wa">💬</div>
-              <div class="clb-info">
-                <div class="clb-name">WhatsApp</div>
-                <div class="clb-val">+57 311 722 6230</div>
-              </div>
-              <span class="clb-arrow">›</span>
-            </a>
+            <p class="contact-sub-text">o conecta por redes sociales</p>
 
-            <a href="https://www.linkedin.com/in/karen-diaz-trochez-dev/" target="_blank" rel="noopener noreferrer"
-              class="contact-link-btn linkedin">
-              <div class="clb-icon ico-linkedin">in</div>
-              <div class="clb-info">
-                <div class="clb-name">LinkedIn</div>
-                <!-- <div class="clb-val">karen-diaz-trochez-dev</div> -->
-              </div>
-              <span class="clb-arrow">›</span>
-            </a>
-
-            <a href="https://github.com/karen-daniela-dev" target="_blank" rel="noopener noreferrer"
-              class="contact-link-btn github">
-              <div class="clb-icon ico-github"><i class="bi bi-github"></i></div>
-              <div class="clb-info">
-                <div class="clb-name">GitHub</div>
-                <!-- <div class="clb-val">daniela-trochez</div> -->
-              </div>
-              <span class="clb-arrow">›</span>
-            </a>
-
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/karen-diaz-trochez-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="soc-icon-btn"
+                aria-label="LinkedIn"
+                >in</a
+              >
+              <a
+                href="https://github.com/karen-daniela-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="soc-icon-btn"
+                aria-label="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="mailto:calidad8844@gmail.com"
+                class="soc-icon-btn"
+                aria-label="Email"
+                >✉️</a
+              >
+            </div>
           </div>
         </div>
-
-        <!-- Derecha -->
-        <div class="contact-panel">
-          <div class="status-indicator">
-            <div class="status-dot" aria-hidden="true"></div>
-            DISPONIBLE
-          </div>
-
-          <a href="assets/CV_Karen_Daniela_Diaz_Software.pdf" download class="btn-cv-big">
-            <i class="bi bi-download me-2"></i> Descargar CV completo
-          </a>
-
-          <p class="contact-sub-text">o conecta por redes sociales</p>
-
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/karen-diaz-trochez-dev/" target="_blank" rel="noopener noreferrer"
-              class="soc-icon-btn" aria-label="LinkedIn">in</a>
-            <a href="https://github.com/karen-daniela-dev" target="_blank" rel="noopener noreferrer"
-              class="soc-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="mailto:calidad8844@gmail.com" class="soc-icon-btn" aria-label="Email">✉️</a>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════ -->
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-copy">
-        © 2026 Karen Daniela Díaz Tróchez
-      </p>
-      <p class="footer-built">
-        Built with Bootstrap 5 · CSS · Vanilla JS
-      </p>
-    </div>
-  </footer>
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Karen Daniela Díaz Tróchez</p>
+        <p class="footer-built">Built with Bootstrap 5 · CSS · Vanilla JS</p>
+      </div>
+    </footer>
 
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        FAB WHATSAPP (fijo en toda la página)
   ════════════════════════════════════════════ -->
-  <a href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
-    target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Contactar por WhatsApp"
-    title="Contactar por WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+    <a
+      href="https://wa.me/573117226230?text=Hola%20Karen%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fab-wa"
+      aria-label="Contactar por WhatsApp"
+      title="Contactar por WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
 
-
-  <!-- ── Scripts ── -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-
-</body>
-
+    <!-- ── Scripts ── -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
